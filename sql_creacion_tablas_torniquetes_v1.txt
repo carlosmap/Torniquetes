@@ -1,0 +1,27 @@
+tabla TMEntradas V1
+create table HojaDeTiempo.dbo.TMEntradas (Dependencia varchar(50), unidad int ,Division varchar(50),Departamento varchar(50), Torniquete varchar(50), 
+NoTarjeta numeric(18, 0), NoDocumento numeric(18, 0),Nombres varchar(50), Apellidos varchar(50), FechaCompleta 
+datetime,Fecha varchar(50),Hora varchar(50),
+EntradaSalida bit,IdDependencia int, id_division int,id_departamento int,IdTerminal )
+
+
+tabla TMSalidas V1
+create table  HojaDeTiempo.dbo.TMSalidas (Dependencia varchar(50), unidad int ,Division varchar(50),Departamento varchar(50), Torniquete varchar(50), 
+NoTarjeta numeric(18, 0), NoDocumento numeric(18, 0),Nombres varchar(50), Apellidos varchar(50), FechaCompleta datetime,Fecha varchar(50),Hora varchar(50),
+EntradaSalida bit,IdDependencia int, id_division int,id_departamento int,IdTerminal )
+
+
+
+
+tabla TMEntradas V2
+create table HojaDeTiempo.dbo.TMEntradas (consecutivo_entradas  numeric(18, 0) identity(1,1) primary key, IdRegistro  numeric(18,0), unidad int, NoDocumento numeric(18, 0),NoTarjeta numeric(18, 0),
+ id_division int,id_departamento int,IdTerminal int,Torniquete varchar(50),  
+  FechaCompleta datetime,Fecha varchar(50),Hora varchar(50),EntradaSalida bit )
+
+tabla TMSalidas V2
+
+create table HojaDeTiempo.dbo.TMSalidas consecutivo_salidas numeric(18, 0) identity(1,1) primary key, IdRegistro  numeric(18,0), unidad int, NoDocumento numeric(18, 0),NoTarjeta numeric(18, 0),
+ id_division int,id_departamento int,IdTerminal int,Torniquete varchar(50),  
+  FechaCompleta datetime,Fecha varchar(50),Hora varchar(50),EntradaSalida bit )
+
+
